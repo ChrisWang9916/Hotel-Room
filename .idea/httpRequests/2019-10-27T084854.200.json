@@ -1,0 +1,11 @@
+{
+  "message": "Room Successfully Added!",
+  "data": {
+    "_id": "5db5923673bd082be4a0fe2b",
+    "roomtype": "JuniorSuite",
+    "price": 70,
+    "roomNumber": 205,
+    "available": "available",
+    "__v": 0
+  }
+}

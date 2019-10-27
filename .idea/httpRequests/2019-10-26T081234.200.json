@@ -1,0 +1,11 @@
+{
+  "status": 200,
+  "message": "Decrease Successful",
+  "rooms": {
+    "id": 1002,
+    "roomtype": "KingBedRoom",
+    "price": 60,
+    "roomNumber": 304,
+    "available": "available"
+  }
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "_id": "5db585d91c9d440000bc14e8",
+    "roomType": "twinRoom",
+    "price": 50,
+    "roomNumber": 202,
+    "available": "available"
+  },
+  {
+    "_id": "5db586811c9d440000bc14ea",
+    "roomType": "KingBedRoom",
+    "price": 60,
+    "roomNumber": 304,
+    "available": "available"
+  },
+  {
+    "_id": "5db586d51c9d440000bc14ec",
+    "roomType": "DelxueRoom",
+    "price": 100,
+    "roomNumber": 806,
+    "available": "unavailable"
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "_id": "5db5ad24f5b625099ce50c63",
+    "roomtype": "twinRoom",
+    "price": 50,
+    "roomNumber": 301,
+    "available": "available",
+    "__v": 0
+  },
+  {
+    "_id": "5db5af40937734355045d181",
+    "roomtype": "twinRoom",
+    "price": 50,
+    "roomNumber": 301,
+    "available": "available",
+    "__v": 0
+  }
+]
