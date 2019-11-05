@@ -29,8 +29,6 @@ app.get('/rooms/:id', rooms.findOneById);
 app.get('/room/:roomNumber', rooms.findByRoomNumber);
 
 app.put('/rooms/:id',rooms.changeAvailable);
-app.put('/increase/:id',rooms.increasePrice);
-app.put('/decrease/:id',rooms.decreasePrice);
 
 app.post('/rooms',rooms.addRoom);
 

@@ -32,7 +32,7 @@ router.findByRoomNumber = (req, res) => {
         res.json({ message: 'Room NOT Found!' } );
 }
 router.changeAvailable = (req, res) => {
-    Room.findById(req.params.id, function(err,room) {
+    rooms.findById(req.params.id, function(err,room) {
         if (err)
             res.json({ message: 'Room NOT Found!', errmsg : err } );
         else {
@@ -54,37 +54,6 @@ router.changeAvailable = (req, res) => {
                         res.json({ message: 'Room Successfully changed!', data: room });
                 })
             }
-        }
-    });
-}
-router.increasePrice = (req, res) => {
-    Room.findById(req.params.id, function(err,room) {
-        if (err)
-            res.json({ message: 'Room NOT Found!', errmsg : err } );
-        else {
-            room.price += 10
-            room.save(function (err) {
-                if (err)
-                    res.json({ message: 'Price NOT changed!', errmsg : err } );
-                else
-                    res.json({ message: 'Price Successfully changed!', data: room });
-            })
-        }
-    });
-
-}
-router.decreasePrice = (req, res) => {
-    Room.findById(req.params.id, function(err,room) {
-        if (err)
-            res.json({ message: 'Room NOT Found!', errmsg : err } );
-        else {
-            room.price -= 10
-            room.save(function (err) {
-                if (err)
-                    res.json({ message: 'Price NOT changed!', errmsg : err } );
-                else
-                    res.json({ message: 'Price Successfully changed!', data: room });
-            })
         }
     });
 }
