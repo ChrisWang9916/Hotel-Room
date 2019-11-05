@@ -8,7 +8,6 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 const rooms = require("./routes/rooms");
-const employees = require("./routes/employees");
 
 var app = express();
 
@@ -28,21 +27,14 @@ app.use('/users', usersRouter);
 app.get('/rooms', rooms.findAll);
 app.get('/rooms/:id', rooms.findOneById);
 app.get('/room/:roomNumber', rooms.findByRoomNumber);
-app.get('/staff', employees.findAll);
-app.get('/staff/:id', employees.findById);
-app.get('/staffN/:name', employees.findByName);
 
 app.put('/rooms/:id',rooms.changeAvailable);
 app.put('/increase/:id',rooms.increasePrice);
 app.put('/decrease/:id',rooms.decreasePrice);
-app.put('/raise/:id',employees.raiseSalary);
-app.put('/paycut/:id',employees.ReduceSalary);
 
 app.post('/rooms',rooms.addRoom);
-app.post('/staff',employees.addE);
 
 app.delete('/rooms/:id', rooms.deleteRoom);
-app.delete('/staff/:id', employees.deleteE);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

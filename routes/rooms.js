@@ -90,13 +90,8 @@ router.decreasePrice = (req, res) => {
 }
 router.addRoom = (req, res) => {
     res.setHeader('Content-Type', 'application/json');
-
-    var room = new Room();
-
-    room.roomtype = req.body.roomtype;
-    room.price = req.body.price;
-    room.roomNumber = req.body.roomNumber;
-    room.available = req.body.available;
+    let id = Math.floor((Math.random() * 1000000) + 1);
+    rooms.push({id : id, roomtype : req.body.roomtype, price : req.body.price, roomNumber : req.body.roomNumber, available : req.body.available})
 
     room.save(function(err) {
         if (err)
@@ -106,7 +101,7 @@ router.addRoom = (req, res) => {
     });
 }
 router.deleteRoom = (req, res) => {
-    Room.findByIdAndRemove(req.params.id, function(err) {
+    rooms.findByIdAndRemove(req.params.id, function(err) {
         if (err)
             res.json({ message: 'Room NOT DELETED!', errmsg : err } );
         else

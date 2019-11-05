@@ -103,4 +103,34 @@ describe("Roomss", () => {
           });
         });
     });
+    describe("POST /rooms", () => {
+        it("should return confirmation message and update datastore", () => {
+          const room = {
+            roomtype: 'twinRoom',
+            price: 50,
+            roomNumber: 202,
+            available: 'available'
+          };
+          return request(server)
+            .post("/rooms")
+            .send(room)
+            .expect(200)
+            .expect({ message: "Room Successfully Added!" });
+        });
+        after(() => {
+            return request(server)
+              .get("/rooms")
+              .expect(200)
+              .then(res => {
+                expect(res.body.length).equals(3);
+                const result = _.map(res.body, room => {
+                  return {
+                    roomtype: room.roomtype,
+                    roomNumber: room.roomNumber
+                  };
+                });
+                expect(result).to.deep.include({ roomtype: 'twinRoom', roomNumber: 202 });
+              });
+          });
+      });
 })
