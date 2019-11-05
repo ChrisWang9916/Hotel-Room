@@ -70,12 +70,14 @@ router.addRoom = (req, res) => {
     });
 }
 router.deleteRoom = (req, res) => {
-    rooms.findByIdAndRemove(req.params.id, function(err) {
-        if (err)
-            res.json({ message: 'Room NOT DELETED!', errmsg : err } );
-        else
-            res.json({ message: 'Room Successfully Deleted!'});
-    });
+    let room = findById(rooms,req.params.id);
+    if (!room)
+       res.json({ message: 'Room NOT DELETED!'} );
+    else {  
+       let index = rooms.indexOf(room);
+       rooms.splice(index, 1);  
+       res.json({ message: 'Room Successfully Deleted!', data: room});
+    }
 }
 
 module.exports = router;
