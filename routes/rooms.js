@@ -1,54 +1,35 @@
-var Room = require('../models/rooms');
-let express = require('express');
-let router = express.Router();
-let mongoose = require('mongoose');
+var rooms = require('../models/rooms');
+var express = require('express');
+var router = express.Router();
 
 
-var mongodbUri = 'mongodb://Wang:XDVUYL4g7@ds239858.mlab.com:39858/heroku_chw6bwn3'
-mongoose.connect(mongodbUri,{useNewUrlParser:true});
-let db = mongoose.connection;
-
-db.on('error', function (err) {
-    console.log('Unable to Connect to [ ' + db.name + ' ]', err);
-});
-
-db.once('open', function () {
-    console.log('Successfully Connected to [ ' + db.name + ' ]');
-});
+let findById = (arr, id) => {
+    let result  = arr.filter(function(o) { return o.id == id;} );
+    return result ? result[0] : null; // or undefined
+}
+let findByRN = (arr, id) => {
+    let result  = arr.filter(function(o) { return o.roomNumber == roomNumber;} );
+    return result ? result[0] : null; // or undefined
+}
 
 router.findAll = (req, res) => {
-    res.setHeader('Content-Type', 'application/json');
-    Room.find(function(err,rooms){
-        if (err)
-            res.send(err)
-
-        res.send(JSON.stringify(rooms,null,5));
-    })
-
-}
+    res.json(rooms);
+};
 router.findOneById = (req, res) => {
-
     res.setHeader('Content-Type', 'application/json');
-
-    Room.find({ "_id" : req.params._id },function(err, room) {
-        if (err)
-            res.json({ message: 'Room NOT Found!', errmsg : err } );
-        else
-            res.send(JSON.stringify(room,null,5));
-    });
-
+    let room = findById(rooms, req.params.id  ) ; 
+    room ? 
+        res.json( room ) :
+        res.json({ message: 'Room NOT Found!' } );
 }
+
 router.findByRoomNumber = (req, res) => {
 
     res.setHeader('Content-Type', 'application/json');
-
-    Room.find({ "roomNumber" : req.params.roomNumber },function(err, room) {
-        if (err)
-            res.json({ message: 'Room NOT Found!', errmsg : err } );
-        else
-            res.send(JSON.stringify(room,null,5));
-    });
-
+    let room = findByRN(rooms, req.params.roomNumber  ) ; 
+    room ? 
+        res.json( room ) :
+        res.json({ message: 'Room NOT Found!' } );
 }
 router.changeAvailable = (req, res) => {
     Room.findById(req.params.id, function(err,room) {
