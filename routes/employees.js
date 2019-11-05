@@ -3,17 +3,16 @@ let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
 
-var mongodbUri = 'mongodb://Wang:XDVUYL4g7@ds239858.mlab.com:39858/heroku_chw6bwn3'
-mongoose.connect(mongodbUri,{useNewUrlParser:true});
+var mongodbUri = 'mongodb+srv://Wang:711925@cluster0-krnln.mongodb.net/employeesdb?retryWrites=true&w=majority'
+mongoose.connect(mongodbUri, { useNewUrlParser: true });
 
 let db = mongoose.connection;
 
 db.on('error', function (err) {
-    console.log('Unable to Connect to [ ' + db.name + ' ]', err);
+    console.log('connection error', err);
 });
-
 db.once('open', function () {
-    console.log('Successfully Connected to [ ' + db.name + ' ]');
+    console.log('connected to database');
 });
 
 router.findAll = (req, res) => {

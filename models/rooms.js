@@ -1,11 +1,6 @@
-let mongoose = require('mongoose');
+var rooms = [
+	{id: 1000000, roomtype: 'twinRoom', price: 50, roomNumber: 605, available:'unavailable'}, 
+	{id: 1000001, roomtype: 'KingBedRoom', price: 60, roomNumber: 714, available:'available'}
+];
 
-let RoomSchema = new mongoose.Schema({
-    roomtype: String,
-    price: Number,
-    roomNumber: Number,
-    available:String
-},
-{ collection: 'roomsdb' })
-
-module.exports = mongoose.model('Room', RoomSchema);
+module.exports = rooms;

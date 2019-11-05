@@ -27,7 +27,7 @@ app.use('/users', usersRouter);
 
 app.get('/rooms', rooms.findAll);
 app.get('/rooms/:id', rooms.findOneById);
-app.get('/rooms/:roomNumber', rooms.findByRoomNumber);
+app.get('/room/:roomNumber', rooms.findByRoomNumber);
 app.get('/staff', employees.findAll);
 app.get('/staff/:id', employees.findById);
 app.get('/staffN/:name', employees.findByName);

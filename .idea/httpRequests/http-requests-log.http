@@ -1,22 +1,11 @@
-POST http://localhost:3000/rooms
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"roomtype": "JuniorSuite", "price": 70, "roomNumber": 205, "available":"available"}
-
-<> 2019-10-28T013936.200.json
-
-###
-
 GET http://localhost:3000/rooms
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"roomtype": "JuniorSuite", "price": 70, "roomNumber": 205, "available":"available"}
+{"roomtype": "KingBedRoom", "price": 60, "roomNumber": 305, "available":"unavailable"}
 
-<> 2019-10-27T105531.200.json
+<> 2019-11-04T055721.200.json
 
 ###
 
@@ -25,7 +14,86 @@ Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"roomtype": "JuniorSuite", "price": 70, "roomNumber": 205, "available":"available"}
+{"roomtype": "KingBedRoom", "price": 60, "roomNumber": 305, "available":"unavailable"}
+
+<> 2019-10-28T024120.200.json
+
+###
+
+DELETE http://localhost:3000/rooms/5db5e46d0fe6a808c00d1a52
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"roomtype": "KingBedRoom", "price": 60, "roomNumber": 305, "available":"unavailable"}
+
+<> 2019-10-28T024113.200.json
+
+###
+
+PUT http://localhost:3000/decrease/5db5e46d0fe6a808c00d1a52
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"roomtype": "KingBedRoom", "price": 60, "roomNumber": 305, "available":"unavailable"}
+
+<> 2019-10-28T024056.200.json
+
+###
+
+PUT http://localhost:3000/increase/5db5e46d0fe6a808c00d1a52
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"roomtype": "KingBedRoom", "price": 60, "roomNumber": 305, "available":"unavailable"}
+
+<> 2019-10-28T024048.200.json
+
+###
+
+PUT http://localhost:3000/rooms/5db5e46d0fe6a808c00d1a52
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"roomtype": "KingBedRoom", "price": 60, "roomNumber": 305, "available":"unavailable"}
+
+<> 2019-10-28T024029.200.json
+
+###
+
+GET http://localhost:3000/room/305
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"roomtype": "KingBedRoom", "price": 60, "roomNumber": 305, "available":"unavailable"}
+
+<> 2019-10-28T024012.200.json
+
+###
+
+GET http://localhost:3000/rooms/5db5d6583a36ad45205ddd48
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"roomtype": "KingBedRoom", "price": 60, "roomNumber": 305, "available":"unavailable"}
+
+<> 2019-10-28T024003.200.json
+
+###
+
+GET http://localhost:3000/rooms
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"roomtype": "KingBedRoom", "price": 60, "roomNumber": 305, "available":"unavailable"}
+
+<> 2019-10-28T023945.200.json
 
 ###
 
@@ -34,9 +102,64 @@ Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"roomtype": "JuniorSuite", "price": 70, "roomNumber": 205, "available":"available"}
+{"roomtype": "KingBedRoom", "price": 60, "roomNumber": 305, "available":"unavailable"}
 
-<> 2019-10-27T084854.200.json
+<> 2019-10-28T023941.200.json
+
+###
+
+GET http://localhost:3000/rooms
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"roomtype": "KingBedRoom", "price": 60, "roomNumber": 304, "available":"unavailable"}
+
+<> 2019-10-28T023924.200.json
+
+###
+
+PUT http://localhost:3000/rooms/5db5e4070fe6a808c00d1a51
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"roomtype": "KingBedRoom", "price": 60, "roomNumber": 304, "available":"unavailable"}
+
+<> 2019-10-28T023843.200.json
+
+###
+
+GET http://localhost:3000/room/304
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"roomtype": "KingBedRoom", "price": 60, "roomNumber": 304, "available":"unavailable"}
+
+<> 2019-10-28T023822.200.json
+
+###
+
+GET http://localhost:3000/rooms/5db5dc553a36ad45205ddd49
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"roomtype": "KingBedRoom", "price": 60, "roomNumber": 304, "available":"unavailable"}
+
+<> 2019-10-28T023814.200.json
+
+###
+
+GET http://localhost:3000/rooms
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"roomtype": "KingBedRoom", "price": 60, "roomNumber": 304, "available":"unavailable"}
+
+<> 2019-10-28T023803.200.json
 
 ###
 
@@ -45,447 +168,381 @@ Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 
-{"roomtype": "JuniorSuite", "price": 70, "roomNumber": 205, "available":'available'}
+{"roomtype": "KingBedRoom", "price": 60, "roomNumber": 304, "available":"unavailable"}
 
-<> 2019-10-27T084820.400.html
+<> 2019-10-28T023759.200.json
+
+###
+
+GET http://localhost:3000/rooms
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"roomtype": "KingBedRoom", "price": 60, "roomNumber": 304, "available":"unavailable"}
+
+<> 2019-10-28T023749.200.json
+
+###
+
+GET http://localhost:3000/rooms
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"roomtype": "KingBedRoom", "price": 60, "roomNumber": 304, "available":"unavailable"}
+
+<> 2019-10-28T023732.200.json
+
+###
+
+DELETE http://localhost:3000/rooms/5db5e3930fe6a808c00d1a50
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"roomtype": "KingBedRoom", "price": 60, "roomNumber": 304, "available":"unavailable"}
+
+<> 2019-10-28T023726.200.json
+
+###
+
+GET http://localhost:3000/rooms
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"roomtype": "KingBedRoom", "price": 60, "roomNumber": 304, "available":"unavailable"}
+
+<> 2019-10-28T023711.200.json
+
+###
+
+DELETE http://localhost:3000/rooms/5db5e3310fe6a808c00d1a4f
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"roomtype": "KingBedRoom", "price": 60, "roomNumber": 304, "available":"unavailable"}
+
+<> 2019-10-28T023704.200.json
+
+###
+
+GET http://localhost:3000/room/304
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"roomtype": "KingBedRoom", "price": 60, "roomNumber": 304, "available":"unavailable"}
+
+<> 2019-10-28T023634.200.json
+
+###
+
+GET http://localhost:3000/rooms/5db5d6583a36ad45205ddd48
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"roomtype": "KingBedRoom", "price": 60, "roomNumber": 304, "available":"unavailable"}
+
+<> 2019-10-28T023626.200.json
+
+###
+
+GET http://localhost:3000/rooms
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"roomtype": "KingBedRoom", "price": 60, "roomNumber": 304, "available":"unavailable"}
+
+<> 2019-10-28T023608.200.json
 
 ###
 
 POST http://localhost:3000/rooms
 Accept: */*
 Cache-Control: no-cache
+Content-Type: application/json
 
-'roomtype': 'JuniorSuite', "price": 70, "roomNumber": 205, "available":'available'
+{"roomtype": "KingBedRoom", "price": 60, "roomNumber": 304, "available":"unavailable"}
 
-<> 2019-10-27T084318.200.json
+<> 2019-10-28T023603.200.json
+
+###
+
+GET http://localhost:3000/rooms
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"roomtype": "KingBedRoom", "price": 60, "roomNumber": 304, "available":"unavailable"}
+
+<> 2019-10-28T023546.200.json
+
+###
+
+GET http://localhost:3000/increase/5db5e3310fe6a808c00d1a4f
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"roomtype": "KingBedRoom", "price": 60, "roomNumber": 304, "available":"unavailable"}
+
+<> 2019-10-28T023505.404.html
+
+###
+
+GET http://localhost:3000/room/205
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"roomtype": "KingBedRoom", "price": 60, "roomNumber": 304, "available":"unavailable"}
+
+<> 2019-10-28T023449.200.json
+
+###
+
+GET http://localhost:3000/rooms/5db5e3310fe6a808c00d1a4f
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"roomtype": "KingBedRoom", "price": 60, "roomNumber": 304, "available":"unavailable"}
+
+<> 2019-10-28T023440.200.json
+
+###
+
+GET http://localhost:3000/rooms
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"roomtype": "KingBedRoom", "price": 60, "roomNumber": 304, "available":"unavailable"}
+
+<> 2019-10-28T023430.200.json
 
 ###
 
 POST http://localhost:3000/rooms
 Accept: */*
 Cache-Control: no-cache
+Content-Type: application/json
 
-{'roomtype': 'JuniorSuite', "price": 70, "roomNumber": 205, "available":'available'}
+{"roomtype": "KingBedRoom", "price": 60, "roomNumber": 304, "available":"unavailable"}
 
-<> 2019-10-27T081009.200.json
-
-###
-
-POST http://localhost:3000/rooms
-Accept: */*
-Cache-Control: no-cache
-
-{"roomtype": 'JuniorSuite', "price": 70, "roomNumber": 205, "available":'available'}
-
-<> 2019-10-27T080826.200.json
+<> 2019-10-28T023425.200.json
 
 ###
 
 GET http://localhost:3000/rooms
 Accept: */*
 Cache-Control: no-cache
+Content-Type: application/json
 
-{"id": 0, "roomtype": 'JuniorSuite', "price": 70, "roomNumber": 205, "available":'available'}
+{"roomtype": "KingBedRoom", "price": 60, "roomNumber": 304, "available":"unavailable"}
 
-<> 2019-10-27T080158.200.json
-
-###
-
-GET http://localhost:3000/rooms
-Accept: */*
-Cache-Control: no-cache
-
-{"id": 0, "roomtype": 'JuniorSuite', "price": 70, "roomNumber": 205, "available":'available'}
-
-<> 2019-10-27T072819.200.json
-
-###
-
-GET http://localhost:3000/rooms
-Accept: */*
-Cache-Control: no-cache
-
-{"id": 0, "roomtype": 'JuniorSuite', "price": 70, "roomNumber": 205, "available":'available'}
-
-<> 2019-10-27T072454.200.json
-
-###
-
-GET http://localhost:3000/rooms
-Accept: */*
-Cache-Control: no-cache
-
-{"id": 0, "roomtype": 'JuniorSuite', "price": 70, "roomNumber": 205, "available":'available'}
-
-<> 2019-10-27T054025.200.json
-
-###
-
-GET http://localhost:3000/rooms
-Accept: */*
-Cache-Control: no-cache
-
-{"id": 0, "roomtype": 'JuniorSuite', "price": 70, "roomNumber": 205, "available":'available'}
-
-<> 2019-10-27T021048.200.json
-
-###
-
-GET http://localhost:3000/rooms
-Accept: */*
-Cache-Control: no-cache
-
-{"id": 0, "roomtype": 'JuniorSuite', "price": 70, "roomNumber": 205, "available":'available'}
-
-###
-
-GET http://localhost:3000/rooms
-Accept: */*
-Cache-Control: no-cache
-
-{"id": 0, "roomtype": 'JuniorSuite', "price": 70, "roomNumber": 205, "available":'available'}
-
-<> 2019-10-26T113451.200.json
-
-###
-
-POST http://localhost:3000/rooms
-Accept: */*
-Cache-Control: no-cache
-
-{"id": 0, "roomtype": 'JuniorSuite', "price": 70, "roomNumber": 205, "available":'available'}
-
-<> 2019-10-26T113445.200.json
-
-###
-
-GET http://localhost:3000/rooms
-Accept: */*
-Cache-Control: no-cache
-
-{"id": 0, "roomtype": 'JuniorSuite', "price": 70, "roomNumber": 205, "available":'available'}
-
-<> 2019-10-26T113347.200.json
-
-###
-
-GET http://localhost:3000/rooms
-Accept: */*
-Cache-Control: no-cache
-
-{"id": 0, "roomtype": 'JuniorSuite', "price": 70, "roomNumber": 205, "available":'available'}
-
-<> 2019-10-26T113316.200.json
-
-###
-
-POST http://localhost:3000/rooms
-Accept: */*
-Cache-Control: no-cache
-
-{"id": 0, "roomtype": 'JuniorSuite', "price": 70, "roomNumber": 205, "available":'available'}
-
-<> 2019-10-26T113312.200.json
-
-###
-
-GET http://localhost:3000/rooms
-Accept: */*
-Cache-Control: no-cache
-
-{"id": 0, "roomtype": 'JuniorSuite', "price": 70, "roomNumber": 205, "available":'available'}
-
-<> 2019-10-26T112758.200.json
-
-###
-
-POST http://localhost:3000/rooms
-Accept: */*
-Cache-Control: no-cache
-
-{"id": 0, "roomtype": 'JuniorSuite', "price": 70, "roomNumber": 205, "available":'available'}
-
-<> 2019-10-26T112753.200.json
-
-###
-
-GET http://localhost:3000/staffN/Tom
-Accept: */*
-Cache-Control: no-cache
-
-{"id": 0, "roomtype": 'JuniorSuite', "price": 70, "roomNumber": 205, "available":'available'}
-
-<> 2019-10-26T102457.200.json
-
-###
-
-GET http://localhost:3000/staffN/Tom
-Accept: */*
-Cache-Control: no-cache
-
-{"id": 0, "roomtype": 'JuniorSuite', "price": 70, "roomNumber": 205, "available":'available'}
-
-<> 2019-10-26T102412.200.json
-
-###
-
-GET http://localhost:3000/staff/10001
-Accept: */*
-Cache-Control: no-cache
-
-{"id": 0, "roomtype": 'JuniorSuite', "price": 70, "roomNumber": 205, "available":'available'}
-
-<> 2019-10-26T102151.200.json
-
-###
-
-GET http://localhost:3000/staff
-Accept: */*
-Cache-Control: no-cache
-
-{"id": 0, "roomtype": 'JuniorSuite', "price": 70, "roomNumber": 205, "available":'available'}
-
-<> 2019-10-26T102139.200.json
-
-###
-
-GET http://localhost:3000/rooms
-Accept: */*
-Cache-Control: no-cache
-
-{"id": 0, "roomtype": 'JuniorSuite', "price": 70, "roomNumber": 205, "available":'available'}
-
-<> 2019-10-26T092122.200.json
-
-###
-
-DELETE http://localhost:3000/rooms/669
-Accept: */*
-Cache-Control: no-cache
-
-{"id": 0, "roomtype": 'JuniorSuite', "price": 70, "roomNumber": 205, "available":'available'}
-
-<> 2019-10-26T092116.200.json
-
-###
-
-GET http://localhost:3000/rooms
-Accept: */*
-Cache-Control: no-cache
-
-{"id": 0, "roomtype": 'JuniorSuite', "price": 70, "roomNumber": 205, "available":'available'}
-
-<> 2019-10-26T092104.200.json
-
-###
-
-POST http://localhost:3000/rooms
-Accept: */*
-Cache-Control: no-cache
-
-{"id": 0, "roomtype": 'JuniorSuite', "price": 70, "roomNumber": 205, "available":'available'}
-
-<> 2019-10-26T092101.200.json
-
-###
-
-GET http://localhost:3000/rooms
-Accept: */*
-Cache-Control: no-cache
-
-{"id": 0, "roomtype": 'JuniorSuite', "price": 70, "roomNumber": 205, "available":'available'}
-
-<> 2019-10-26T092039.200.json
-
-###
-
-GET http://localhost:3000/rooms
-Accept: */*
-Cache-Control: no-cache
-
-{"id": 0, "roomtype": 'JuniorSuite', "price": 70, "roomNumber": 205, "available":'available'}
-
-<> 2019-10-26T091945.200.json
-
-###
-
-POST http://localhost:3000/rooms
-Accept: */*
-Cache-Control: no-cache
-
-{"id": 0, "roomtype": 'JuniorSuite', "price": 70, "roomNumber": 205, "available":'available'}
-
-<> 2019-10-26T091939.200.json
+<> 2019-10-28T023416.200.json
 
 ###
 
 PUT http://localhost:3000/rooms
 Accept: */*
 Cache-Control: no-cache
+Content-Type: application/json
 
-{"id": 0, "roomtype": 'JuniorSuite', "price": 70, "roomNumber": 205, "available":'available'}
+{"roomtype": "KingBedRoom", "price": 60, "roomNumber": 304, "available":"unavailable"}
 
-<> 2019-10-26T091932.404.html
-
-###
-
-GET http://localhost:3000/rooms
-Accept: */*
-Cache-Control: no-cache
-
-{"id": 0, "roomtype": 'JuniorSuite', "price": 70, "roomNumber": 205, "available":'available'}
-
-<> 2019-10-26T085853.200.json
-
-###
-
-POST http://localhost:3000/rooms
-Accept: */*
-Cache-Control: no-cache
-
-{"id": 0, "roomtype": 'JuniorSuite', "price": 70, "roomNumber": 205, "available":'available'}
-
-<> 2019-10-26T085848.200.json
+<> 2019-10-28T023337.404.html
 
 ###
 
 GET http://localhost:3000/rooms
 Accept: */*
 Cache-Control: no-cache
+Content-Type: application/json
 
-{"id": 0, "roomtype": "JuniorSuite", "price": 70, "roomNumber": 205, "available":"available"}
+{"roomtype": "KingBedRoom", "price": 60, "roomNumber": 304, "available":"unavailable"}
 
-<> 2019-10-26T085053.200.json
+<> 2019-10-28T023325.200.json
+
+###
+
+GET http://localhost:3000/room
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"roomtype": "KingBedRoom", "price": 60, "roomNumber": 304, "available":"unavailable"}
+
+<> 2019-10-28T023251.404.html
+
+###
+
+POST http://localhost:3000/staff
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"name": "Steven", "age": 41, "position": "Security personnel","salary":500}
+
+###
+
+PUT http://localhost:3000/paycut/5db5ddd33a36ad45205ddd4a
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"name": "Steven", "age": 41, "position": "Security personnel","salary":500}
+
+<> 2019-10-28T023035.200.json
+
+###
+
+PUT http://localhost:3000/raise/5db5ddd33a36ad45205ddd4a
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"name": "Steven", "age": 41, "position": "Security personnel","salary":500}
+
+<> 2019-10-28T023019.200.json
+
+###
+
+GET http://localhost:3000/staff
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"name": "Steven", "age": 41, "position": "Security personnel","salary":500}
+
+<> 2019-10-28T023006.200.html
+
+###
+
+PUT http://localhost:3000/decrease/5db5d6583a36ad45205ddd48
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"name": "Steven", "age": 41, "position": "Security personnel","salary":500}
+
+<> 2019-10-28T022949.200.json
+
+###
+
+PUT http://localhost:3000/increase/5db5d6583a36ad45205ddd48
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"name": "Steven", "age": 41, "position": "Security personnel","salary":500}
+
+<> 2019-10-28T022934.200.json
+
+###
+
+PUT http://localhost:3000/rooms/5db5d6583a36ad45205ddd48
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"name": "Steven", "age": 41, "position": "Security personnel","salary":500}
+
+<> 2019-10-28T022919.200.json
 
 ###
 
 GET http://localhost:3000/rooms
 Accept: */*
 Cache-Control: no-cache
+Content-Type: application/json
 
-{"id": 0, "roomtype": "JuniorSuite", "price": 70, "roomNumber": 205, "available":"available"}
+{"name": "Steven", "age": 41, "position": "Security personnel","salary":500}
 
-<> 2019-10-26T085033.200.json
-
-###
-
-POST http://localhost:3000/rooms
-Accept: */*
-Cache-Control: no-cache
-
-{"id": 0, "roomtype": "JuniorSuite", "price": 70, "roomNumber": 205, "available":"available"}
-
-<> 2019-10-26T085029.200.json
+<> 2019-10-28T022909.200.json
 
 ###
 
-GET http://localhost:3000/rooms
+GET http://localhost:3000/staffN/Tom
 Accept: */*
 Cache-Control: no-cache
+Content-Type: application/json
 
-{"id": 0, "roomtype": "JuniorSuite", "price": 70, "roomNumber": 205, "available":"available"}
+{"name": "Steven", "age": 41, "position": "Security personnel","salary":500}
 
-<> 2019-10-26T084721.200.json
+<> 2019-10-28T022852.200.html
 
 ###
 
-POST http://localhost:3000/rooms
+GET http://localhost:3000/staff/5db5de9e46d4563f20970538
 Accept: */*
 Cache-Control: no-cache
+Content-Type: application/json
 
-{"id": 0, "roomtype": "JuniorSuite", "price": 70, "roomNumber": 205, "available":"available"}
+{"name": "Steven", "age": 41, "position": "Security personnel","salary":500}
 
-<> 2019-10-26T084717.200.json
+<> 2019-10-28T022842.200.html
 
 ###
 
-GET http://localhost:3000/rooms
+GET http://localhost:3000/staff
 Accept: */*
 Cache-Control: no-cache
+Content-Type: application/json
 
-"id": 0, "roomtype": "JuniorSuite", "price": 70, "roomNumber": 205, "available":"available"
+{"name": "Steven", "age": 41, "position": "Security personnel","salary":500}
 
-<> 2019-10-26T084558.200.json
+<> 2019-10-28T022831.200.html
 
 ###
 
-POST http://localhost:3000/rooms
+GET http://localhost:3000/room/205
 Accept: */*
 Cache-Control: no-cache
+Content-Type: application/json
 
-"id": 0, "roomtype": "JuniorSuite", "price": 70, "roomNumber": 205, "available":"available"
+{"name": "Steven", "age": 41, "position": "Security personnel","salary":500}
 
-<> 2019-10-26T084554.200.json
+<> 2019-10-28T022820.200.json
 
 ###
 
-GET http://localhost:3000/rooms
+GET http://localhost:3000/rooms/5db5d6583a36ad45205ddd48
 Accept: */*
 Cache-Control: no-cache
+Content-Type: application/json
 
-"id": 0, "roomtype": "JuniorSuite", "price": 70, "roomNumber": 205, "available":"available"
+{"name": "Steven", "age": 41, "position": "Security personnel","salary":500}
 
-<> 2019-10-26T084545.200.json
+<> 2019-10-28T022810.200.json
 
 ###
 
 GET http://localhost:3000/rooms
 Accept: */*
 Cache-Control: no-cache
+Content-Type: application/json
 
-id: 1004, roomtype: 'JuniorSuite', price: 70, roomNumber: 205, available:'available'
+{"name": "Steven", "age": 41, "position": "Security personnel","salary":500}
 
-<> 2019-10-26T084337.200.json
-
-###
-
-POST http://localhost:3000/rooms
-Accept: */*
-Cache-Control: no-cache
-
-id: 1004, roomtype: 'JuniorSuite', price: 70, roomNumber: 205, available:'available'
-
-<> 2019-10-26T084332.200.json
+<> 2019-10-28T022801.200.json
 
 ###
 
-PUT http://localhost:3000/rooms/1002
+GET http://localhost:3000/rooms/5db5dc553a36ad45205ddd49
 Accept: */*
 Cache-Control: no-cache
+Content-Type: application/json
 
-<> 2019-10-26T081911.200.json
+{"name": "Steven", "age": 41, "position": "Security personnel","salary":500}
 
-###
-
-PUT http://localhost:3000/rooms/1002
-Accept: */*
-Cache-Control: no-cache
-
-<> 2019-10-26T081907.200.json
-
-###
-
-POST http://localhost:3000/decrease/1002
-Accept: */*
-Cache-Control: no-cache
-
-<> 2019-10-26T081234.200.json
-
-###
-
-GET http://localhost:3000/rooms/1002
-Accept: */*
-Cache-Control: no-cache
-
-<> 2019-10-26T081222.200.json
-
-###
-
-POST http://localhost:3000/add/1002
-Accept: */*
-Cache-Control: no-cache
-
-<> 2019-10-26T081209.200.json
+<> 2019-10-28T022726.200.json
 
 ###
 
