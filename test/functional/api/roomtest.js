@@ -133,11 +133,10 @@ describe("Roomss", () => {
               });
           });
       });
-      describe('PUT /rooms/:id',  () => {
-        describe("when the id is valid", () => {
+    describe('PUT /rooms/:id',  () => {
           it("should return a message and change available", () => {
             return request(server)
-              .put(`/rooms/1000001`)
+              .put('/rooms/1000001')
               .expect(200)
               .then(resp => {
                 expect(resp.body).to.include({
@@ -159,14 +158,27 @@ describe("Roomss", () => {
                 expect(res.body).to.include({ id: datastore[1].id, available:'unavailable' });
               });
           });
-        });
-        describe("when the id is invalid", () => {
-            it("should return a 404 and a message for invalid id", () => {
-              return request(server)
-                .put("/rooms/2000000")
-                .expect(404)
-                .expect({ message:'Room NOT Found!' });
-            });
-        });
     });
+    describe('DELETE /rooms/:id', () => {
+          it("should delete a room", () => {
+            return request(server)
+              .delete(`/rooms/${datastore[0].id}`)
+              .set("Accept", "application/json")
+              .expect("Content-Type", /json/)
+              .expect(200)
+              .then(res => {
+                expect(res.body).to.include({ message: 'Room Successfully Deleted!'})
+            });
+          });
+          after(() => {
+            return request(server)
+              .get('/rooms')
+              .set("Accept", "application/json")
+              .expect("Content-Type", /json/)
+              .expect(200)
+              .then(res => {
+                expect(res.body).not.to.include({id: 1000000, roomtype: 'twinRoom', price: 50, roomNumber: 605, available:'unavailable'});
+              });
+          });
+        });
 })
