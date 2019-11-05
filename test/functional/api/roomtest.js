@@ -133,4 +133,40 @@ describe("Roomss", () => {
               });
           });
       });
+      describe('PUT /rooms/:id',  () => {
+        describe("when the id is valid", () => {
+          it("should return a message and change available", () => {
+            return request(server)
+              .put(`/rooms/1000001`)
+              .expect(200)
+              .then(resp => {
+                expect(resp.body).to.include({
+                  message: "Room Successfully changed!"
+                });
+                expect(resp.body.data).to.include({
+                  id: 1000001,
+                  available:'unavailable'
+                });
+              });
+          });
+          after(() => {
+            return request(server)
+              .get(`/rooms/${datastore[1].id}`)
+              .set("Accept", "application/json")
+              .expect("Content-Type", /json/)
+              .expect(200)
+              .then(res => {
+                expect(res.body).to.include({ id: datastore[1].id, available:'unavailable' });
+              });
+          });
+        });
+        describe("when the id is invalid", () => {
+            it("should return a 404 and a message for invalid id", () => {
+              return request(server)
+                .put("/rooms/2000000")
+                .expect(404)
+                .expect({ message:'Room NOT Found!' });
+            });
+        });
+    });
 })
