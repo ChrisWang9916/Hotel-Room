@@ -49,4 +49,31 @@ describe("Roomss", () => {
                 }).timeout(5000)
         });
     });
+    describe("GET /rooms/:id", () => {
+        describe("when the id is valid", () => {
+          it("should return the matching room", done => {
+            request(server)
+              .get(`/rooms/${datastore[0].id}`)
+              .set("Accept", "application/json")
+              .expect("Content-Type", /json/)
+              .expect(200)
+              .end((err, res) => {
+                expect(res.body).to.deep.include(datastore[0]);
+                done(err);
+              });
+          });
+        });
+        describe("when the id is invalid", () => {
+          it("should return the NOT found message", done => {
+            request(server)
+              .get("/rooms/9999")
+              .set("Accept", "application/json")
+              .expect("Content-Type", /json/)
+              .expect(200)
+              .expect({ message: "Room NOT Found!" }, (err, res) => {
+                done(err);
+                });
+          });
+        });
+    });
 })
