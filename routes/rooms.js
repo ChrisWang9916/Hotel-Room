@@ -7,7 +7,7 @@ let findById = (arr, id) => {
     let result  = arr.filter(function(o) { return o.id == id;} );
     return result ? result[0] : null; // or undefined
 }
-let findByRN = (arr, id) => {
+let findByRN = (arr, roomNumber) => {
     let result  = arr.filter(function(o) { return o.roomNumber == roomNumber;} );
     return result ? result[0] : null; // or undefined
 }

@@ -76,4 +76,31 @@ describe("Roomss", () => {
           });
         });
     });
+    describe("GET /room/:roomNumber", () => {
+        describe("when the roomNumber is valid", () => {
+          it("should return the matching room", done => {
+            request(server)
+              .get(`/room/${datastore[0].roomNumber}`)
+              .set("Accept", "application/json")
+              .expect("Content-Type", /json/)
+              .expect(200)
+              .end((err, res) => {
+                expect(res.body).to.deep.include(datastore[0]);
+                done(err);
+              });
+          });
+        });
+        describe("when the roomNumber is invalid", () => {
+          it("should return the NOT found message", done => {
+            request(server)
+              .get("/room/9999")
+              .set("Accept", "application/json")
+              .expect("Content-Type", /json/)
+              .expect(200)
+              .expect({ message: "Room NOT Found!" }, (err, res) => {
+                done(err);
+            });
+          });
+        });
+    });
 })
